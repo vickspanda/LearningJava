@@ -2,7 +2,7 @@ package curWork;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Vector;
-
+import java.util.Stack;
 
 public class LeCol {
 
@@ -77,4 +77,30 @@ public class LeCol {
         System.out.println("The Name at 5th Index:\t"+arr.get(4));
     }
 
+//    In Java, a Stack is a linear data structure that follows the Last In First Out (LIFO) principle and is defined in the java.util package. Internally, it extends the Vector class.
+//
+//    Stack class maintains insertion order and allows duplicates and null values.
+//    Grows dynamically when its capacity is exceeded.
+//    All the methods of Stack are synchronized. It is thread-safe.
+//    Stack is considered a legacy class, introduced in early versions of Java and a preferred solution to implement Stack Data Structure (especially when thread synchronization is not needed) is either to use ArrayDeque or LinkedList
+//    Stack class implements List, RandomAccess, Cloneable, and Serializable interfaces.
+//
+
+    public void stack(){
+        Stack<String> arr = new Stack<>();
+        System.out.println("Initial Capacity: "+arr.capacity());
+        Scanner sc = new Scanner(System.in);
+        for(int i = 0; i < 6; i++)
+            arr.push(sc.nextLine());
+
+        System.out.println(arr);
+
+        arr.pop();
+        System.out.println(arr);
+
+        arr.remove("Vikas Sharma");
+        System.out.println(arr);
+
+        System.out.println("The Name at Peek:\t"+arr.peek());
+    }
 }
