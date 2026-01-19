@@ -1,8 +1,5 @@
 package curWork;
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.Vector;
-import java.util.Stack;
+import java.util.*;
 
 public class LeCol {
 
@@ -102,5 +99,40 @@ public class LeCol {
         System.out.println(arr);
 
         System.out.println("The Name at Peek:\t"+arr.peek());
+    }
+
+
+//
+//
+//    LinkedList is a part of the Java Collection Framework and is present in the java.util package. It implements a doubly-linked list data structure where elements are not stored in contiguous memory. Each node contains three parts: the data, a reference to the next node, and a reference to the previous node
+//
+//    Dynamic Size: LinkedList grows or shrinks dynamically at runtime.
+//    Maintains Insertion Order: Elements are stored in the order they are added.
+//    Allows Duplicates: Duplicate elements are allowed.
+//    Not Synchronized: By default, LinkedList is not thread-safe. To make Thread-safe use of Collections.synchronizedList().
+//    Efficient Insertion/Deletion: Adding or removing elements at the beginning or middle is faster compared to ArrayList.
+//
+//
+    public void linkedList(){
+        LinkedList<String> ll = new LinkedList<>();
+        Scanner sc = new Scanner(System.in);
+        for(int i = 0; i < 6; i++)
+            ll.add(sc.nextLine());
+
+        System.out.println(ll);
+
+        ll.set(2,"Sanjana");
+        System.out.println(ll);
+
+        ll.remove(3);
+        System.out.println(ll);
+
+        for (int i=0;i<ll.size();i++)
+            System.out.print(ll.get(i)+"\t");
+        System.out.println();
+
+        for (String name:ll)
+            System.out.print(name+"\t");
+        System.out.println();
     }
 }

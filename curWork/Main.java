@@ -298,7 +298,7 @@ public class Main {
 //        obj.display();
 
         LeCol obj = new LeCol();
-        obj.stack();
+        obj.linkedList();
 
     }
 }
