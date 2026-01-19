@@ -244,4 +244,44 @@ public class LeCol {
         System.out.println();
 
     }
+//
+//    A PriorityQueue in Java is a queue where elements are ordered based on their priority, rather than the order of insertion. By default, it uses natural ordering (min-heap), but a custom comparator can be used to define different priorities.
+//
+//    Elements are processed based on priority rather than insertion order.
+//    Supports standard queue operations like add(), poll(), and peek().
+//    Automatically grows as elements are added.
+//    Uses a heap data structure internally to ensure efficient insertion and removal of the highest-priority element.
+//
+
+    public void pq() {
+        PriorityQueue<String> pq = new PriorityQueue<>();
+        Scanner sc = new Scanner(System.in);
+
+        // To add
+        for (int i = 0; i < 5; i++)
+            pq.add(sc.nextLine());
+
+        System.out.println(pq);
+
+        // To access
+
+        System.out.println("Contains 'Vikas':\t"+pq.contains("Vikas"));
+        System.out.println(pq.peek());
+
+        // To remove
+        pq.remove("Vikas");
+        System.out.println(pq);
+
+
+        System.out.println(pq.poll());
+        System.out.println(pq);
+
+
+        // To traverse
+        System.out.println("Using Enhanced for loop:\t");
+        for (String name : pq)
+            System.out.print(name + "\t");
+        System.out.println();
+
+    }
 }
