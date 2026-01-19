@@ -171,4 +171,77 @@ public class LeCol {
             System.out.print(name+"\t");
         System.out.println();
     }
+//
+//    LinkedHashSet in Java implements the Set interface of the Collections Framework.
+//
+//    It combines the functionalities of a HashSet with a doubly-linked list to maintain the insertion order of elements.
+//    LinkedHashSet stores unique elements only and allows a single null.
+//    Implements Set, Cloneable and Serializable interfaces.
+//
+//
+
+    public void lhs(){
+        LinkedHashSet<String> lhs = new LinkedHashSet<>();
+        Scanner sc = new Scanner(System.in);
+        for (int i=0;i<5;i++)
+            lhs.add(sc.nextLine());
+
+        System.out.println(lhs);
+
+        lhs.remove("Vikas");
+
+        // Two ways to Iterate the hashSet, Either use iterate() method or use enhanced for loop
+        System.out.println("Using Iterator:\t");
+        Iterator<String> iterator = lhs.iterator();
+
+        while(iterator.hasNext())
+            System.out.print(iterator.next()+"\t");
+        System.out.println();
+
+
+        System.out.println("Using Enchanced for loop:\t");
+        for(String name: lhs)
+            System.out.print(name+"\t");
+        System.out.println();
+    }
+//
+//    A TreeSet is a collection class that stores unique elements in a sorted order. It is part of java.util package that implements the SortedSet interface, and internally uses a Red-Black tree to maintain sorting.
+//
+//    Does not allow duplicates and null values. From JDK 7 onward, inserting null throws NullPointerException.
+//    Implements the NavigableSet interface and provides navigation methods like higher(), lower(), ceiling() and floor().
+//    TreeSet is not synchronized. it must be synchronized using Collections.synchronizedSet().
+
+    public void ts() {
+        TreeSet<String> ts = new TreeSet<>();
+        Scanner sc = new Scanner(System.in);
+
+        // To add
+        for (int i = 0; i < 5; i++)
+            ts.add(sc.nextLine());
+
+        System.out.println(ts);
+
+        // To access
+
+        System.out.println("Contains 'Vikas':\t"+ts.contains("Vikas"));
+        System.out.println(ts.first());
+        System.out.println(ts.last());
+
+        // To remove
+        ts.remove("Vikas");
+        System.out.println(ts);
+
+        ts.pollFirst();
+        System.out.println(ts);
+
+        ts.pollLast();
+        System.out.println(ts);
+
+        // To traverse
+        System.out.println("Using Enchanced for loop:\t");
+        for (String name : ts)
+            System.out.print(name + "\t");
+        System.out.println();
+
+    }
 }
