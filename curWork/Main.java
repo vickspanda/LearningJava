@@ -297,8 +297,8 @@ public class Main {
 //        Arrays obj = new Arrays();
 //        obj.display();
 
-        AbsCh obj = new AbsCh();
-        obj.display();
+        LeCol obj = new LeCol();
+        obj.arrayList();
 
     }
 }
