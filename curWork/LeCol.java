@@ -127,11 +127,47 @@ public class LeCol {
         ll.remove(3);
         System.out.println(ll);
 
-        for (int i=0;i<ll.size();i++)
+        for(int i=0;i<ll.size();i++)
             System.out.print(ll.get(i)+"\t");
         System.out.println();
 
         for (String name:ll)
+            System.out.print(name+"\t");
+        System.out.println();
+    }
+
+//
+//    HashSet in Java implements the Set interface of the Collections Framework. It is used to store the unique elements, and it doesn't maintain any specific order of elements.
+//
+//    HashSet does not allow duplicate elements.
+//    Uses HashMap internally which is an implementation of hash table data structure.
+//    Also implements Serializable and Cloneable interfaces.
+//    HashSet is not thread-safe. To make it thread-safe, synchronization is needed externally.
+//
+//
+    public void hashSet(){
+        HashSet<String> hs = new HashSet<>();
+        Scanner sc = new Scanner(System.in);
+
+        for(int i=0;i<6;i++)
+            hs.add(sc.nextLine());
+
+        System.out.println(hs);
+
+        hs.remove("Vikas");
+        System.out.println(hs);
+
+        // Two ways to Iterate the hashSet, Either use iterate() method or use enhanced for loop
+        System.out.println("Using Iterator:\t");
+        Iterator<String> iterator = hs.iterator();
+
+        while(iterator.hasNext())
+            System.out.print(iterator.next()+"\t");
+        System.out.println();
+
+
+        System.out.println("Using Enchanced for loop:\t");
+        for(String name: hs)
             System.out.print(name+"\t");
         System.out.println();
     }
