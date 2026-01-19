@@ -330,4 +330,30 @@ public class LeCol {
         System.out.println();
 
     }
+
+
+//    A HashMap is a part of Java’s Collection Framework and implements the Map interface. It stores elements in key-value pairs, where, Keys are unique. and Values can be duplicated.
+//
+//    Internally uses Hashing, hence allows efficient key-based retrieval, insertion, and removal with an average of O(1) time.
+//    HashMap is not thread-safe, to make it synchronized, use Collections.synchronizedMap().
+//    Insertion order is not preserved in HashMap. To preserve the insertion order, LinkedHashMap is used and to maintain sorted order, TreeMap is used.
+
+    public void hMap(){
+        HashMap<String,Integer> hm = new HashMap<>();
+        Scanner sc = new Scanner(System.in);
+
+        // To Add
+        for (int i=0;i<5;i++)
+            hm.put(sc.next(), sc.nextInt());
+
+        System.out.println(hm);
+
+        // To Remove
+        hm.remove(sc.next());
+        System.out.println(hm);
+
+        // To traverse
+        for (Map.Entry<String,Integer> e: hm.entrySet())
+            System.out.println("Key :\t"+e.getKey()+" Value :\t"+e.getValue());
+    }
 }
