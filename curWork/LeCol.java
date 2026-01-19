@@ -437,4 +437,39 @@ public class LeCol {
 
     }
 
+
+
+    //A TreeMap in Java is a part of the java.util package that implements the Map interface. It stores key-value pairs in a sorted order using either a natural or custom comparator.
+    //
+    //TreeMap internally uses a Red-Black Tree for efficient sorting.
+    //Provides O(log n) time for insertion, deletion and lookup.
+    //TreeMap does not allow null keys, but allows null values.
+
+    public void tMap(){
+
+        TreeMap<String, Integer> tmap = new TreeMap<>();
+        Scanner sc = new Scanner(System.in);
+
+        // To Add
+        for (int i=0;i<5;i++)
+            tmap.put(sc.next(), sc.nextInt());
+
+        System.out.println(tmap);
+
+        // To Replace
+
+        tmap.put(sc.next(),sc.nextInt());
+        System.out.println(tmap);
+
+        // to Remove
+
+        tmap.remove(sc.next());
+        System.out.println(tmap);
+
+        // To traverse
+        for (Map.Entry<String,Integer> e : tmap.entrySet())
+            System.out.println(e.getKey()+" : "+e.getValue());
+
+    }
+
 }
