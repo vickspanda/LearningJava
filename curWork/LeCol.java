@@ -1,4 +1,6 @@
 package curWork;
+import com.sun.security.jgss.GSSUtil;
+
 import java.util.*;
 
 public class LeCol {
@@ -280,6 +282,50 @@ public class LeCol {
         // To traverse
         System.out.println("Using Enhanced for loop:\t");
         for (String name : pq)
+            System.out.print(name + "\t");
+        System.out.println();
+
+    }
+//
+//    ArrayDeque is a resizable-array implementation of the Deque interface in Java. It is part of java.util package provides a double-ended queue implementation, allowing elements to be added or removed from both ends efficiently.
+//
+//    ArrayDeque grows dynamically.
+//    It generally provides faster operations than LinkedList as it is more cache friendly and does not require overhead of next previous reference management.
+//    Operations like addFirst(), addLast(), removeFirst(), removeLast() are all done in constant time O(1).
+//    ArrayDeque is not Thread-Safe
+
+    public void arrDQ(){
+
+        Deque<String> dq = new ArrayDeque<>();
+        Scanner sc = new Scanner(System.in);
+
+        //To Add
+        for (int i = 0;i<5;i++)
+            dq.add(sc.nextLine());
+        System.out.println(dq);
+        dq.addFirst("Mango");
+        System.out.println(dq);
+        dq.addLast("Apple");
+        System.out.println(dq);
+        dq.offer("Kewi");
+        System.out.println(dq);
+
+        // To Access
+        System.out.println("First Element:\t"+dq.getFirst());
+        System.out.println("Last Element:\t"+dq.getLast());
+
+        // To Remove
+        dq.pop();
+        System.out.println(dq);
+        dq.poll();
+        System.out.println(dq);
+        dq.pollFirst();
+        System.out.println(dq);
+
+
+        // To traverse
+        System.out.println("Using Enhanced for loop:\t");
+        for (String name : dq)
             System.out.print(name + "\t");
         System.out.println();
 
