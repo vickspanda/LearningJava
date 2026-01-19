@@ -3,6 +3,11 @@ import com.sun.security.jgss.GSSUtil;
 
 import java.util.*;
 
+
+enum Day {
+    MON, TUE, WED, THU, FRI, SAT, SUN
+}
+
 public class LeCol {
 
 //    """An ArrayList in Java is a resizable (or dynamic) array from the java.util package that can grow or shrink automatically as elements are added or removed, unlike regular arrays with a fixed size.
@@ -356,4 +361,49 @@ public class LeCol {
         for (Map.Entry<String,Integer> e: hm.entrySet())
             System.out.println("Key :\t"+e.getKey()+" Value :\t"+e.getValue());
     }
+
+
+//
+//    EnumMap is a specialized implementation of the Map interface for enumeration types. It extends AbstractMap and implements the Map interface in Java. It belongs to java.util package. A few important features of EnumMap are as follows:
+//
+//    The EnumMap class is a member of the Java Collections Framework and is not synchronized.
+//    EnumMap is an ordered collection and they are maintained in the natural order of their keys (the natural order of keys means the order in which enum constants are declared inside the enum type).
+//    It’s a high-performance map implementation, much faster than HashMap.
+//    All keys of each EnumMap instance must be keys of a single enum type.
+//    EnumMap doesn't allow a null key and throws NullPointerException when we attempt to insert the null key.
+//    Iterators returned by the collection views are weakly consistent: they will never throw ConcurrentModificationException and they may or may not show the effects of any modifications to the map that occur while the iteration is in progress.
+//    EnumMap is internally represented as arrays. This representation is extremely compact and efficient.
+
+
+    public void eMap(){
+        EnumMap<Day, String> emap = new EnumMap<>(Day.class);
+
+        // To Add
+        emap.put(Day.MON,"Start of week");
+        emap.put(Day.FRI,"End of week");
+        emap.put(Day.SUN,"Weekend");
+        emap.put(Day.SAT,"Semi-Weekend");
+
+        // To Access
+
+        System.out.println("Key-Value mappings: " + emap.entrySet());
+        System.out.println("Keys: " + emap.keySet());
+        System.out.println("Values: " + emap.values());
+        System.out.println("Value of FRI : " + emap.get(Day.FRI));
+
+
+        // To Remove
+        String i = emap.remove(Day.SUN);
+        System.out.println("Removed Value:\t"+i);
+
+        // To Replace
+        emap.replace(Day.MON,"Great Day");
+        System.out.println(emap);
+
+        // To traverse
+        for(Day day: emap.keySet())
+            System.out.println(day+"\t"+emap.get(day));
+
+    }
+
 }
