@@ -1,6 +1,7 @@
 package curWork;
 import com.sun.security.jgss.GSSUtil;
 
+import javax.swing.*;
 import java.util.*;
 
 
@@ -403,6 +404,36 @@ public class LeCol {
         // To traverse
         for(Day day: emap.keySet())
             System.out.println(day+"\t"+emap.get(day));
+
+    }
+
+
+// The AbstractMap class is a part of the Java Collection Framework. It directly implements the Map interface to provide a structure to it, by doing so it makes the further implementations easier. As the name suggests AbstractMap is an abstract class by definition, therefore it cannot be used to create objects. The concrete classes that inherit from AbstractMap can be used to create objects.
+
+
+    public void absMap(){
+
+        AbstractMap<String,Integer> amap = new HashMap<String,Integer>();
+        Scanner sc =new Scanner(System.in);
+
+
+        // To Add
+        for (int i=0;i<5;i++)
+            amap.put(sc.next(), sc.nextInt());
+
+        System.out.println(amap);
+
+//        // To Remove
+        amap.remove(sc.next());
+        System.out.println(amap);
+
+        // To traverse
+        for (AbstractMap.Entry<String,Integer> e: amap.entrySet())
+            System.out.println("Key :\t"+e.getKey()+" Value :\t"+e.getValue());
+
+        // TO Replace
+        amap.replace(sc.next(), sc.nextInt());
+        System.out.println(amap);
 
     }
 
