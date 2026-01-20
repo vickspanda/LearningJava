@@ -2,7 +2,9 @@
 package curWork;
 import java.lang.String;
 // Class, access modifiers and Constructor are explored
+import LeColPac.LeCol;
 import vehicle.*;
+import lestring.*;
 class User{
     private String name;
     private int age;
@@ -297,8 +299,9 @@ public class Main {
 //        Arrays obj = new Arrays();
 //        obj.display();
 
-        AbsCh obj = new AbsCh();
-        obj.display();
+        learningString ls = new learningString();
+        ls.basicOps();
+
 
     }
 }
