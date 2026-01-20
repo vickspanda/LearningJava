@@ -2,6 +2,7 @@
 package curWork;
 import java.lang.String;
 // Class, access modifiers and Constructor are explored
+import LeColPac.LeCol;
 import vehicle.*;
 class User{
     private String name;
@@ -297,8 +298,8 @@ public class Main {
 //        Arrays obj = new Arrays();
 //        obj.display();
 
-        AbsCh obj = new AbsCh();
-        obj.display();
+        LeCol obj = new LeCol();
+        obj.tMap();
 
     }
 }
