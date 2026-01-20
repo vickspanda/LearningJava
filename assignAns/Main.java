@@ -9,7 +9,8 @@ public class Main {
             case 0 :
                 System.out.println("Exiting");
                 break;
-            case 1 : Task1 task1 = new Task1();
+            case 1 :
+                Task1 task1 = new Task1();
                 task1.ans1();
                 task1.ans2();
                 task1.ans3();
@@ -27,6 +28,12 @@ public class Main {
                 task3.demo();
                 task3.countVowels();
                 break;
+            case 5 :
+                Task5 task5 = new Task5();
+                task5.ans1();
+                task5.ans2();
+                task5.ans3();
+                break;
             default:
                 System.out.println("Invalid Choice");
         }
@@ -42,6 +49,7 @@ public class Main {
             System.out.println("1.\tTask 1");
             System.out.println("2.\tTask 2");
             System.out.println("3.\tTask 3");
+            System.out.println("5.\tTask 5");
             System.out.print("Enter Your Choice\t");
             choice = sc.nextInt();
             demo.demo(choice);
