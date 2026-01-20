@@ -1,7 +1,5 @@
-package curWork;
-import com.sun.security.jgss.GSSUtil;
+package LeColPac;
 
-import javax.swing.*;
 import java.util.*;
 
 
@@ -423,7 +421,7 @@ public class LeCol {
 
         System.out.println(amap);
 
-//        // To Remove
+        // To Remove
         amap.remove(sc.next());
         System.out.println(amap);
 
