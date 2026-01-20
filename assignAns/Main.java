@@ -22,6 +22,11 @@ public class Main {
                 System.out.println("Emp1 is same as Emp2:\t"+emp1.equals(emp2));
                 System.out.println("Hashcode for Emp:\t"+ emp1.hashCode());
                 break;
+            case 3 :
+                Task3 task3 = new Task3();
+                task3.demo();
+                task3.countVowels();
+                break;
             default:
                 System.out.println("Invalid Choice");
         }
@@ -36,6 +41,7 @@ public class Main {
         {
             System.out.println("1.\tTask 1");
             System.out.println("2.\tTask 2");
+            System.out.println("3.\tTask 3");
             System.out.print("Enter Your Choice\t");
             choice = sc.nextInt();
             demo.demo(choice);
