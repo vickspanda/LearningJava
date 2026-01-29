@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="obj1" class="org.panda.Dev" autowire="byType">
+        <!--        Example of Constructor Injection-->
+            <constructor-arg index="0" value="25"></constructor-arg>
+<!--            <property name="comp" ref="obj4"></property>-->
+    </bean>
+
+    <bean id="obj2" class="org.panda.Dev">
+<!--        Example of Setter Injection-->
+        <property name="age" value="35"></property>
+    </bean>
+
+    <bean id="obj3" class="org.panda.Laptop"></bean>
+
+    <bean id="obj4" class="org.panda.Desktop" primary="true"></bean>
+
+</beans>
