@@ -2,6 +2,7 @@ package com.panda.UserRole.controller;
 
 import com.panda.UserRole.dto.LoginCreds;
 import com.panda.UserRole.service.LoginService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,8 +17,8 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestBody LoginCreds creds) throws Exception
+    public ResponseEntity<String> login(@RequestBody LoginCreds creds) throws Exception
     {
-        return this.service.login(creds);
+        return ResponseEntity.ok(this.service.login(creds));
     }
 }

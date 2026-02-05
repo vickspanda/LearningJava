@@ -23,7 +23,7 @@ public class LoginService {
     boolean validateUser(String userName, String passWord) throws Exception
     {
         User user = repo.findByUserName(userName)
-            .orElseThrow(() -> new UserNotFoundException("User" +userName+" Not Found"));
+            .orElseThrow(() -> new UserNotFoundException("User " +userName+" Not Found"));
         return service.matches(passWord,user.getPassWord());
     }
 
